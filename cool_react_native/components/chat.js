@@ -9,7 +9,6 @@ import {
   Image,
   StatusBar,
 } from 'react-native'
-import {Colors} from 'react-native/Libraries/NewAppScreen'
 
 const DATA = [
   {
@@ -71,13 +70,9 @@ class Chat extends React.Component {
           renderItem={({item, index, separators}) => (
             <TouchableHighlight
               key={item.key}
+              underlayColor="null"
               onPress={() => this._onPress(item)}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  height: 100,
-                  padding: 20,
-                }}>
+              <View style={styles.groupItem}>
                 <Image
                   style={styles.tinyLogo}
                   source={{
@@ -85,15 +80,12 @@ class Chat extends React.Component {
                       'https://yt3.ggpht.com/ytc/AAUvwnhN5kgme30N4jdO6ttsVD7ikpWfWJRNmgrGu2LzIg=s900-c-k-c0x00ffffff-no-rj',
                   }}
                 />
-
-                <View styles={styles.groupInfo}>
+                <View style={styles.groupInfo}>
                   <View style={styles.groupInfo1}>
                     <Text style={styles.titleName}>{item.title}</Text>
                     <Text style={styles.titleDate}>21/06/1993</Text>
                   </View>
-                  <View style={styles.groupInfo1}>
-                    <Text style={styles.titleContent}>noi dung gan nhat</Text>
-                  </View>
+                  <Text style={styles.titleContent}>noi dung gan nhat</Text>
                 </View>
               </View>
             </TouchableHighlight>
@@ -119,51 +111,28 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
-    // justifyContent: 'space-between',
     height: 70,
     marginVertical: 1.0,
     marginHorizontal: 15,
   },
   groupInfo: {
-    //flexDirection: 'column',
-    backgroundColor: 'red',
     flex: 1,
-    //alignItems: 'center',
-    //justifyContent: 'space-between',
-    //justifyContent: 'flex-end',
   },
   groupInfo1: {
     flexDirection: 'row',
-
-    // flex: 1,
-    backgroundColor: 'yellow',
     alignItems: 'center',
-    //justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
   },
   titleName: {
     fontSize: 18,
-    justifyContent: 'center',
-    //flex: 0.5,
-    //position: 'absolute',
-    // left: 0,
-    // top: 0,
     marginLeft: 10,
   },
   titleDate: {
     fontSize: 10,
-    //flex: 0.5,
-    //: 'red',
-    // marginRight: 10,
-    marginLeft: 10,
-    // justifyContent: 'flex-end',
   },
   titleContent: {
     fontSize: 15,
-    // justifyContent: 'space-evenly',
-    flex: 1,
     marginLeft: 10,
-    backgroundColor: 'slateblue',
-    //alignItems: 'stretch',
   },
 })
 

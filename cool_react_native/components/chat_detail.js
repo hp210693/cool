@@ -62,7 +62,7 @@ const DATA = [
   },
 ]
 
-class Chat extends React.Component {
+class ChatDetail extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
@@ -162,4 +162,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default Chat
+export default ChatDetail
