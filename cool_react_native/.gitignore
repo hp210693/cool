@@ -7,7 +7,14 @@
 build/
 *.pbxuser
 !default.pbxuser
+project.pbxproj
+ios/cool_react_native.xcodeproj/project.pbxpro
+yarn.lock
+ios/cool_react_native.xcodeproj/project.xcworkspace/
+ios/cool_react_native.xcworkspace/
 *.mode1v3
+../.DS_Store
+ios/Podfile.lock
 !default.mode1v3
 *.mode2v3
 !default.mode2v3
